@@ -13,6 +13,12 @@ function Instance.new(Info)
 
     end
 
+    if Info.Children then
+       for _, child in ipairs(Info.Children) do
+          child.Parent = new  
+       end
+    end
+    
     if Info.Parent then
         new.Parent = Info.Parent
     end
